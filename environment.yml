@@ -1,0 +1,21 @@
+name: cs590
+channels:
+  - https://levinthal:paradox@conda.graylab.jhu.edu
+  - anaconda
+  - conda-forge
+  - bioconda
+dependencies:
+  - jupyter
+  - tqdm
+  - matplotlib
+  - pandas
+  - numpy
+  - nglview 
+  - seaborn
+  - scipy
+  - scikit-learn
+  - pyrosetta
+  - biopython
+  - weblogo
+  - sqlalchemy
+  - psycopg2
