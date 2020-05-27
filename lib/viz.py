@@ -11,7 +11,7 @@ def sequence_compare(a, b):
     print(''.join(['|' if a[i] != b[i] else ' ' for i in range(len(a))]))
     print(b)
 
-def render_weblogo(seqs, residues_per_line=100):
+def render_weblogo(seqs, residues_per_line=None):
     fin = io.StringIO()
     for i in range(len(seqs)):
         fin.write(f"> seq_{i}\n")
@@ -22,7 +22,7 @@ def render_weblogo(seqs, residues_per_line=100):
     logodata = weblogo.LogoData.from_seqs(seqs)
     logooptions = weblogo.LogoOptions()
     logooptions.unit_name = 'probability'
-    logooptions.stacks_per_line = residues_per_line
+    logooptions.stacks_per_line = residues_per_line or len(seqs[0])
     logooptions.color_scheme = weblogo.colorscheme.chemistry
     logoformat = weblogo.LogoFormat(logodata, logooptions)
     return Image(weblogo.png_print_formatter(logodata, logoformat))

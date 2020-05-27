@@ -1,0 +1,26 @@
+name: proteinsolver
+channels:
+  - pytorch
+  - conda-forge 
+  - anaconda
+  - kimlab
+  - ostrokach-forge
+  - bioconda 
+dependencies:
+  - proteinsolver
+  - jupyter
+  - tqdm
+  - matplotlib
+  - pytorch==1.4
+  - torchvision
+  - pandas
+  - numpy
+  - pyarrow
+  - gcsfs
+  - apache-beam
+  - kmbio
+  - kmtools 
+  - weblogo
+  - nglview 
+  - sqlalchemy
+  - psycopg2

@@ -53,9 +53,8 @@ class ProteinMixin:
     def num_residues(self):
         return len(self.residues())
     
-    def delete(self):
-        os.remove(self.path)
-            
+    def contacts(self):
+        return list(zip(self.contact_x, self.contact_y))
     @memoize
     def header(self):
         return parse_pdb_header(self.file_path)

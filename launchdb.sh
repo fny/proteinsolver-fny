@@ -1,5 +1,6 @@
 #!/bin/bash
 #SBATCH --partition compsci
+#SBATCH --cpus-per-task 16
 #SBATCH --nodes 1
 #SBATCH --ntasks-per-node 1
 #SBATCH --mem-per-cpu 8G
